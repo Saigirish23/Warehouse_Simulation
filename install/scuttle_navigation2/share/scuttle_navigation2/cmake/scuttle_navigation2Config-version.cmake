@@ -1,0 +1,1 @@
+/home/b24me1066/Warehouse_Simulation/build/scuttle_navigation2/ament_cmake_core/scuttle_navigation2Config-version.cmake

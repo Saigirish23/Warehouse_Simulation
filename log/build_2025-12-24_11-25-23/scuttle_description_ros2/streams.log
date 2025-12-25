@@ -1,0 +1,65 @@
+[0.019s] Invoking command in '/home/b24me1066/Warehouse_Simulation/build/scuttle_description_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/b24me1066/turtlebot3_ws/install/turtlebot3_teleop:/home/b24me1066/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake /home/b24me1066/Warehouse_Simulation/src/scuttle_description_ros2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2
+[0.130s] -- The C compiler identification is GNU 11.4.0
+[0.189s] -- The CXX compiler identification is GNU 11.4.0
+[0.204s] -- Detecting C compiler ABI info
+[0.279s] -- Detecting C compiler ABI info - done
+[0.287s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.288s] -- Detecting C compile features
+[0.289s] -- Detecting C compile features - done
+[0.294s] -- Detecting CXX compiler ABI info
+[0.368s] -- Detecting CXX compiler ABI info - done
+[0.378s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.379s] -- Detecting CXX compile features
+[0.379s] -- Detecting CXX compile features - done
+[0.405s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.577s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.644s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.771s] -- Configuring done
+[0.773s] -- Generating done
+[0.775s] -- Build files have been written to: /home/b24me1066/Warehouse_Simulation/build/scuttle_description_ros2
+[0.780s] Invoked command in '/home/b24me1066/Warehouse_Simulation/build/scuttle_description_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/b24me1066/turtlebot3_ws/install/turtlebot3_teleop:/home/b24me1066/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake /home/b24me1066/Warehouse_Simulation/src/scuttle_description_ros2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2
+[0.782s] Invoking command in '/home/b24me1066/Warehouse_Simulation/build/scuttle_description_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/b24me1066/turtlebot3_ws/install/turtlebot3_teleop:/home/b24me1066/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/b24me1066/Warehouse_Simulation/build/scuttle_description_ros2 -- -j4 -l4
+[0.821s] Invoked command in '/home/b24me1066/Warehouse_Simulation/build/scuttle_description_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/b24me1066/turtlebot3_ws/install/turtlebot3_teleop:/home/b24me1066/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/b24me1066/Warehouse_Simulation/build/scuttle_description_ros2 -- -j4 -l4
+[0.824s] Invoking command in '/home/b24me1066/Warehouse_Simulation/build/scuttle_description_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/b24me1066/turtlebot3_ws/install/turtlebot3_teleop:/home/b24me1066/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/b24me1066/Warehouse_Simulation/build/scuttle_description_ros2
+[0.829s] -- Install configuration: ""
+[0.830s] -- Execute custom install script
+[0.830s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//urdf/materials.xacro
+[0.839s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//urdf/scuttle.gazebo
+[0.845s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//urdf/scuttle.trans
+[0.852s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//urdf/scuttle.urdf
+[0.859s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//urdf/scuttle.urdf.backup_plugins
+[0.866s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//urdf/scuttle.urdf.xacro
+[0.873s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//urdf/scuttle.urdf.xacro.backup
+[0.882s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//urdf/scuttle.xacro
+[0.888s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//meshes/chassis_link.stl
+[0.895s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//meshes/chassis_link_collision.stl
+[0.901s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//meshes/l_caster_swivel_1.stl
+[0.908s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//meshes/l_caster_swivel_collision_1.stl
+[0.915s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//meshes/l_caster_wheel_1.stl
+[0.921s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//meshes/l_caster_wheel_collision_1.stl
+[0.927s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//meshes/l_wheel_1.stl
+[0.934s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//meshes/l_wheel_collision_1.stl
+[0.940s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//meshes/lidar_1.stl
+[0.948s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//meshes/r_caster_swivel_1.stl
+[0.955s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//meshes/r_caster_swivel_collision_1.stl
+[0.962s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//meshes/r_caster_wheel_1.stl
+[0.969s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//meshes/r_caster_wheel_collision_1.stl
+[0.975s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//meshes/r_wheel_1.stl
+[0.981s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//meshes/r_wheel_collision_1.stl
+[0.988s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2//config/camera_slider_controller.yaml
+[0.995s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/ament_index/resource_index/package_run_dependencies/scuttle_description_ros2
+[1.002s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/ament_index/resource_index/parent_prefix_path/scuttle_description_ros2
+[1.008s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2/environment/ament_prefix_path.sh
+[1.014s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2/environment/ament_prefix_path.dsv
+[1.022s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2/environment/path.sh
+[1.028s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2/environment/path.dsv
+[1.035s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2/local_setup.bash
+[1.041s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2/local_setup.sh
+[1.048s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2/local_setup.zsh
+[1.056s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2/local_setup.dsv
+[1.062s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2/package.dsv
+[1.068s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/ament_index/resource_index/packages/scuttle_description_ros2
+[1.075s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2/cmake/scuttle_description_ros2Config.cmake
+[1.081s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2/cmake/scuttle_description_ros2Config-version.cmake
+[1.088s] -- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_description_ros2/share/scuttle_description_ros2/package.xml
+[1.097s] Invoked command in '/home/b24me1066/Warehouse_Simulation/build/scuttle_description_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/b24me1066/turtlebot3_ws/install/turtlebot3_teleop:/home/b24me1066/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --install /home/b24me1066/Warehouse_Simulation/build/scuttle_description_ros2

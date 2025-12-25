@@ -1,0 +1,1 @@
+/home/b24me1066/Warehouse_Simulation/build/scuttle_description_ros2/ament_cmake_environment_hooks/local_setup.sh

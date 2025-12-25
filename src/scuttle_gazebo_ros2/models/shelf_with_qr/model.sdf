@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+<model name="shelf_with_qr">
+<static>true</static>
+<link name="shelf_plate">
+<visual name="plate_vis">
+<pose>0 0 0 0 0 0</pose>
+<geometry>
+<box>
+<size>0.2 0.01 0.2</size>
+</box>
+</geometry>
+<material>
+<script>
+<uri>file://$(find warehouse_world)/models/shelf_with_qr/materials/scripts</uri>
+<uri>file://$(find warehouse_world)/models/shelf_with_qr/materials/textures</uri>
+<name>qr_texture</name>
+</script>
+</material>
+</visual>
+</link>
+</model>
+</sdf>

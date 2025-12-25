@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+<model name="box_with_text">
+<static>false</static>
+<link name="box_link">
+<visual name="box_vis">
+<pose>0 0 0.15 0 0 0</pose>
+<geometry>
+<box>
+<size>0.3 0.3 0.3</size>
+</box>
+</geometry>
+<material>
+<ambient>1 1 1 1</ambient>
+</material>
+</visual>
+</link>
+</model>
+</sdf>

@@ -1,0 +1,1 @@
+/home/b24me1066/Warehouse_Simulation/src/scuttle_navigation2/scripts/competition_waypoint_navigator.py

@@ -1,0 +1,212 @@
+<?xml version="1.0" ?>
+<robot name="scuttle" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<xacro:property name="body_color" value="Gazebo/Silver" />
+<xacro:property name="wheel_color" value="Gazebo/Blue" />
+<xacro:property name="lidar_color" value="Gazebo/Gray" />
+
+<xacro:arg name="differential_drive_command_topic" default="cmd_vel"/>
+<xacro:arg name="differential_drive_odometry_topic" default="odom"/>
+<xacro:arg name="differential_drive_odometry_frame" default="odom"/>
+
+<!-- ROS2: gazebo_ros_control is NOT needed for basic diff drive + sensors -->
+<rosDebugLevel>na</rosDebugLevel>
+<publishOdomTF>true</publishOdomTF>
+
+<!-- ============================================ -->
+<!-- MATERIAL PROPERTIES FOR GAZEBO               -->
+<!-- ============================================ -->
+
+<gazebo reference="base_link">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+  <gravity>true</gravity>
+</gazebo>
+
+<gazebo reference="l_wheel">
+  <material>${wheel_color}</material>
+  <mu1>0.9</mu1>
+  <mu2>0.9</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="r_wheel">
+  <material>${wheel_color}</material>
+  <mu1>0.9</mu1>
+  <mu2>0.9</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="lidar_1">
+  <material>${lidar_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="r_caster_swivel">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="l_caster_swivel">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="l_caster_wheel">
+  <material>${wheel_color}</material>
+  <mu1>0.4</mu1>
+  <mu2>0.4</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<gazebo reference="r_caster_wheel">
+  <material>${wheel_color}</material>
+  <mu1>0.4</mu1>
+  <mu2>0.4</mu2>
+  <selfCollide>true</selfCollide>
+</gazebo>
+
+<!-- ============================================ -->
+<!-- DIFFERENTIAL DRIVE CONTROLLER (ROS2)         -->
+<!-- ============================================ -->
+
+<gazebo>
+  <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+    <!-- ROS2 Parameters -->
+    <ros>
+      <namespace>/</namespace>
+      <remapping>cmd_vel:=$(arg differential_drive_command_topic)</remapping>
+      <remapping>odom:=$(arg differential_drive_odometry_topic)</remapping>
+    </ros>
+
+    <!-- Plugin update rate in Hz -->
+    <update_rate>50</update_rate>
+
+    <!-- wheels -->
+    <left_joint>l_wheel_joint</left_joint>
+    <right_joint>r_wheel_joint</right_joint>
+
+    <!-- kinematics -->
+    <wheel_separation>0.355</wheel_separation>
+    <wheel_diameter>0.0833</wheel_diameter>
+
+    <!-- limits -->
+    <max_wheel_torque>0.392</max_wheel_torque>
+    <max_wheel_acceleration>2.7</max_wheel_acceleration>
+
+    <!-- output -->
+    <publish_odom>true</publish_odom>
+    <publish_odom_tf>true</publish_odom_tf>
+    <publish_wheel_tf>false</publish_wheel_tf>
+
+    <odometry_frame>$(arg differential_drive_odometry_frame)</odometry_frame>
+    <robot_base_frame>base_link</robot_base_frame>
+  </plugin>
+</gazebo>
+
+<!-- ============================================ -->
+<!-- JOINT STATE PUBLISHER (ROS2)                 -->
+<!-- ============================================ -->
+
+<gazebo>
+  <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+    <ros>
+      <namespace>/</namespace>
+      <remapping>~/out:=joint_states</remapping>
+    </ros>
+    <update_rate>50</update_rate>
+    <joint_name>l_wheel_joint</joint_name>
+    <joint_name>r_wheel_joint</joint_name>
+    <joint_name>l_caster_swivel_joint</joint_name>
+    <joint_name>r_caster_swivel_joint</joint_name>
+    <joint_name>l_caster_wheel_joint</joint_name>
+    <joint_name>r_caster_wheel_joint</joint_name>
+    <joint_name>camera_slider_joint</joint_name>
+  </plugin>
+</gazebo>
+
+<!-- ============================================ -->
+<!-- LIDAR SENSOR (ROS2)                          -->
+<!-- ============================================ -->
+
+<gazebo reference="lidar_1">
+  <sensor type="ray" name="rplidar_a1">
+    <pose>0 0 0 0 0 0</pose>
+    <visualize>false</visualize>
+    <update_rate>5.5</update_rate>
+    <ray>
+      <scan>
+        <horizontal>
+          <samples>360</samples>
+          <resolution>1</resolution>
+          <min_angle>0</min_angle>
+          <max_angle>6.283185307179586</max_angle>
+        </horizontal>
+      </scan>
+      <range>
+        <min>0.15</min>
+        <max>12.0</max>
+        <resolution>0.005</resolution>
+      </range>
+      <noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.01</stddev>
+      </noise>
+    </ray>
+    <plugin name="gazebo_ros_laser_controller" filename="libgazebo_ros_ray_sensor.so">
+      <ros>
+        <namespace>/</namespace>
+        <remapping>~/out:=scan</remapping>
+      </ros>
+      <output_type>sensor_msgs/LaserScan</output_type>
+      <frame_name>lidar_1</frame_name>
+    </plugin>
+  </sensor>
+</gazebo>
+
+<!-- ============================================ -->
+<!-- CAMERA SENSOR (ROS2)                         -->
+<!-- ============================================ -->
+
+<gazebo reference="camera_link">
+  <sensor type="camera" name="scuttle_camera">
+    <always_on>1</always_on>
+    <update_rate>30</update_rate>
+    <visualize>false</visualize>
+
+    <camera>
+      <horizontal_fov>1.047</horizontal_fov>
+      <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8G8B8</format>
+      </image>
+      <clip>
+        <near>0.05</near>
+        <far>100.0</far>
+      </clip>
+    </camera>
+
+    <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+      <ros>
+        <namespace>/</namespace>
+        <remapping>~/image_raw:=camera/image_raw</remapping>
+        <remapping>~/camera_info:=camera/camera_info</remapping>
+      </ros>
+      <camera_name>camera</camera_name>
+      <frame_name>camera_optical_frame</frame_name>
+      <hack_baseline>0.07</hack_baseline>
+    </plugin>
+  </sensor>
+</gazebo>
+
+</robot>

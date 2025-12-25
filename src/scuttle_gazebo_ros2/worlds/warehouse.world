@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="warehouse_with_racks_and_path">
+  
+  <!-- ROS2 Gazebo plugins loaded automatically by gzserver.launch.py -->
+  <!-- Do not manually add libgazebo_ros_init.so or libgazebo_ros_factory.so here -->
+    
+    <!-- Physics -->
+    <physics type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <!-- Lighting -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Ground Plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <!-- ============================================ -->
+    <!-- WAREHOUSE WALLS (3.1m x 4.2m x 2m high)     -->
+    <!-- Opening: 900mm starting from West wall      -->
+    <!-- ============================================ -->
+    <!-- South Wall - RIGHT part (after opening, from 0.9m to 3.1m) -->
+    <model name="wall_south_right">
+      <static>true</static>
+      <link name="link">
+        <pose>2.0 0.05 1.0 0 0 0</pose>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>2.2 0.1 2.0</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>2.2 0.1 2.0</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- North Wall (3.1m length) -->
+    <model name="wall_north">
+      <static>true</static>
+      <link name="link">
+        <pose>1.55 4.15 1.0 0 0 0</pose>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>3.1 0.1 2.0</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>3.1 0.1 2.0</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- West Wall (4.2m length) -->
+    <model name="wall_west">
+      <static>true</static>
+      <link name="link">
+        <pose>0.05 2.1 1.0 0 0 0</pose>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 4.1 2.0</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 4.1 2.0</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- East Wall (4.2m length) -->
+    <model name="wall_east">
+      <static>true</static>
+      <link name="link">
+        <pose>3.05 2.1 1.0 0 0 0</pose>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 4.1 2.0</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 4.1 2.0</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ============================================ -->
+    <!-- STORAGE RACKS - EAST WALL (3 racks)         -->
+    <!-- Dimensions: 0.91m x 0.35m x 1.8m high       -->
+    <!-- Placed on ground (Z = 0)                    -->
+    <!-- Displaced: +0.20m North from original       -->
+    <!-- ============================================ -->
+    
+    <!-- Rack 1 - Original: (2.575, 2.92) + 0.20m North = (2.575, 3.12) -->
+    <model name="rack_east_1">
+      <static>true</static>
+      <link name="link">
+        <pose>2.575 3.12 0 0 0 0</pose>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>model://rack/rack.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>model://rack/rack.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.7 0.5 0.2 1</ambient>
+            <diffuse>0.7 0.5 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Rack 2 - Original: (2.575, 4.12) + 0.20m North = (2.575, 4.32) -->
+    <model name="rack_east_2">
+      <static>true</static>
+      <link name="link">
+        <pose>2.575 4.32 0 0 0 0</pose>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>model://rack/rack.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>model://rack/rack.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.7 0.5 0.2 1</ambient>
+            <diffuse>0.7 0.5 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Rack 3 - Original: (2.575, 5.32) + 0.20m North = (2.575, 5.52) -->
+    <model name="rack_east_3">
+      <static>true</static>
+      <link name="link">
+        <pose>2.575 5.52 0 0 0 0</pose>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>model://rack/rack.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>model://rack/rack.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.7 0.5 0.2 1</ambient>
+            <diffuse>0.7 0.5 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ============================================ -->
+    <!-- STORAGE RACKS - NORTH WALL (2 racks)        -->
+    <!-- Placed on ground (Z = 0)                    -->
+    <!-- Displaced: +0.20m East, -0.10m South       -->
+    <!-- ============================================ -->
+    
+    <!-- Rack 4 - Original: (-2.030, 3.870) + 0.20m East, -0.10m South = (-1.830, 3.770) -->
+    <model name="rack_north_1">
+      <static>true</static>
+      <link name="link">
+        <pose>-1.830 3.770 0 0 0 1.5708</pose>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>model://rack/rack.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>model://rack/rack.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.7 0.5 0.2 1</ambient>
+            <diffuse>0.7 0.5 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Rack 5 - Original: (-0.800, 3.860) + 0.20m East, -0.10m South = (-0.600, 3.760) -->
+    <model name="rack_north_2">
+      <static>true</static>
+      <link name="link">
+        <pose>-0.600 3.760 0 0 0 1.5708</pose>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>model://rack/rack.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>model://rack/rack.stl</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.7 0.5 0.2 1</ambient>
+            <diffuse>0.7 0.5 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

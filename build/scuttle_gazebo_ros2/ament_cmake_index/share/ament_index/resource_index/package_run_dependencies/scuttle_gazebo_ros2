@@ -1,0 +1,1 @@
+gazebo_ros_pkgs;geometry_msgs;rclcpp;sensor_msgs;xacro;scuttle_description_ros2;gazebo_ros;gazebo_plugins;robot_state_publisher

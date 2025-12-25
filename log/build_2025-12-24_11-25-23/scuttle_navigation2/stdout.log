@@ -1,0 +1,70 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/b24me1066/Warehouse_Simulation/build/scuttle_navigation2
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/launch/competition_nodes_only.launch.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/launch/geotag_recorder.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/launch/lane_follower_nav.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/launch/localization_keepout_launch.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/launch/localization_launch.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/launch/navigation_launch.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/launch/online_async_launch.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/launch/warehouse_mission.launch.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/launch/waypoint_navigator.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/ball_tracker_params_robot.yaml
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/ball_tracker_params_sim.yaml
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/drive_bot.rviz
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/empty.yaml
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/filter_info_server_params.yaml
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/gaz_ros2_ctl_use_sim.yaml
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/gazebo_params.yaml
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/joystick.yaml
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/main.rviz
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/map.rviz
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/mapper_params_online_async.yaml
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/my_controllers.yaml
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/nav2_params.yaml
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/nav2_params_competition.yaml
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/nav2_scuttle.rviz
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/twist_mux.yaml
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/config/view_bot.rviz
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/lib/scuttle_navigation2/obstacle_speed_controller.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/lib/scuttle_navigation2/emergency_stop.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/lib/scuttle_navigation2/wifi_monitor.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/lib/scuttle_navigation2/vertical_scanner.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/lib/scuttle_navigation2/qr_code_scanner.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/lib/scuttle_navigation2/competition_waypoint_navigator.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/lib/scuttle_navigation2/competition_server.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/lib/scuttle_navigation2/waypoint_validator.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/lib/scuttle_navigation2/interactive_waypoint_recorder.py
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/ament_index/resource_index/package_run_dependencies/scuttle_navigation2
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/ament_index/resource_index/parent_prefix_path/scuttle_navigation2
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/environment/ament_prefix_path.sh
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/environment/ament_prefix_path.dsv
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/environment/path.sh
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/environment/path.dsv
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/local_setup.bash
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/local_setup.sh
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/local_setup.zsh
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/local_setup.dsv
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/package.dsv
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/ament_index/resource_index/packages/scuttle_navigation2
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/cmake/scuttle_navigation2Config.cmake
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/cmake/scuttle_navigation2Config-version.cmake
+-- Symlinking: /home/b24me1066/Warehouse_Simulation/install/scuttle_navigation2/share/scuttle_navigation2/package.xml

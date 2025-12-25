@@ -1,0 +1,4 @@
+source;share/scuttle_gazebo_ros2/local_setup.bash
+source;share/scuttle_gazebo_ros2/local_setup.dsv
+source;share/scuttle_gazebo_ros2/local_setup.sh
+source;share/scuttle_gazebo_ros2/local_setup.zsh
